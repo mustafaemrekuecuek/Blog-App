@@ -2,6 +2,8 @@
 
 Diese Blog-App ist ein einfaches, serverseitiges JavaScript-Projekt, das mit Express.js erstellt wurde. Es ermöglicht Benutzern das Anzeigen, Hinzufügen, Bearbeiten und Löschen von Blog-Posts in einer PostgreSQL-Datenbank.
 
+![Blog-App](Preview.png)
+
 ## Funktionen
 
 - Anzeigen aller Blog-Posts auf der Startseite.
@@ -21,7 +23,7 @@ Diese Blog-App ist ein einfaches, serverseitiges JavaScript-Projekt, das mit Exp
 
 ### Um das Projekt zu installieren, klonen Sie das Repository und installieren Sie die Abhängigkeiten:
 
-git clone [URL-zum-Repository]
+git clone (https://github.com/mustafaemrekuecuek/Blog-App.git)
 npm install
 
 ## Konfiguration
