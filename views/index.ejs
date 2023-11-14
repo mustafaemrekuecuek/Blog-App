@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mein Blog</title>
+</head>
+<body>
+    <header>
+        <h1>Willkommen auf meinem Blog</h1>
+        <p>Hier teile ich meine Gedanken und Erfahrungen mit der Welt.</p>
+    </header>
+    <main>
+        <form action="/add-post" method="POST">
+            <label for="title">Titel:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="content">Inhalt:</label>
+            <textarea id="content" name="content" required></textarea>
+
+            <input type="submit" value="Post hinzufügen">
+        </form>
+        <br>
+        <% posts.forEach(element => {%>
+        <article>
+            <h2><%= element.title %></h2>
+            <p><%= element.content%></p>
+            <form>
+                <button type="submit" formaction="/edit/<%= element.id %>" formmethod="get" class="edit-btn" >Edit</button>
+                <button class="delete-btn" formaction="/delete/<%= element.id %>" formmethod="post">Delete</button>
+            </form>
+        </article>
+        <% }) %>
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <title>Blog Post bearbeiten</title>
+</head>
+<body>
+    <header>
+        <h1>Blog Post bearbeiten</h1>
+    </header>
+    <main>
+        <form action="/edit/<%= editPost.id %>" method="POST" class="edit"> 
+            <label for="title">Titel:</label>
+            <input type="text" id="title" name="title" value="<%=editPost.title%>">
+
+            <label for="content">Inhalt:</label>
+            <textarea id="content" name="content"><%=editPost.content%></textarea>
+
+            <input type="submit" value="Änderungen speichern">
+        </form>
+    </main>
+</body>
+</html>
